@@ -14,6 +14,7 @@ env:
   CCACHE_MAXSIZE: 200M
   CCACHE_MAXFILES: 0
   SCCACHE_CACHE_SIZE: 200M
+  ACTIONS_STEP_DEBUG: true
 jobs:
   cache-toolchains-posix:
     runs-on: ubuntu-20.04
