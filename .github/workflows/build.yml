@@ -144,7 +144,7 @@ jobs:
           sudo apt remove -y libc6-i386
       - run: ./get-clang.sh
       - run: ccache -z
-      - run: ./build.sh
+      - run: sh -x ./build.sh
       - run: ccache -s
       - name: Pack assets
         run: |
