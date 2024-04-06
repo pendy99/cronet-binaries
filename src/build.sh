@@ -44,7 +44,6 @@ if [ "$CCACHE" ]; then
 fi
 
 flags="$flags"'
-  is_clang=true
   use_sysroot=false
 
   fatal_linker_warnings=false
