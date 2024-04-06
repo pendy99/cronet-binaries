@@ -97,7 +97,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [x64, x86, arm64, arm, mipsel, mips64el, riscv64]
+        arch: [x64, arm]
     env:
       EXTRA_FLAGS: 'target_cpu="${{ matrix.arch }}"'
       BUNDLE: cronet-${{ github.event.release.tag_name }}-${{ github.job }}-${{ matrix.arch }}
@@ -166,7 +166,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [x64, x86, arm64, arm]
+        arch: [arm64, arm]
     env:
       EXTRA_FLAGS: 'target_cpu="${{ matrix.arch }}" target_os="android"'
       BUNDLE: cronet-${{ github.event.release.tag_name }}-${{ github.job }}-${{ matrix.arch }}
